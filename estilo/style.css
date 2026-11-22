@@ -68,7 +68,18 @@ section.imagem {
     background-size: cover;
     background-position: right center;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
-    background-attachment: fixed;
+    animation: parallax linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+@keyframes parallax {
+    from {
+        background-position: center 0%;
+    }
+    to {
+        background-position: bottom 50%;
+    }
 }
 
 section.imagem > p {
